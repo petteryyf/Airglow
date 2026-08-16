@@ -20,9 +20,6 @@
 
 这是「渲染」这个词，第一次在区块链上有了真实的、不可篡改的含义。
 
-CPU 有 Behemoth，显卡有 Airglow。
-计算机史从「通用 CPU」到「专用 GPU」的那次分叉，正在链上重演。
-
 帧缓冲：
 core = 0x00003c24243c0000
 glow = 0x003c424242423c00
@@ -45,9 +42,6 @@ No pixel was "uploaded" into the chain. `pixel(x,y)` is a public pure function �
 
 This is the first time the word "rendering" has a real, immutable meaning on-chain.
 
-CPU: Behemoth. GPU: Airglow.
-The fork in computing history — from general-purpose CPU to dedicated GPU — is now replaying, on-chain.
-
 Framebuffer:
 core = 0x00003c24243c0000
 glow = 0x003c424242423c00
@@ -63,7 +57,7 @@ glow = 0x003c424242423c00
 ## 发推 Checklist
 
 - [ ] 配图：`airglow.png`
-- [ ] Tag `@BNBCHAIN`（呼应 Behemoth 那次的 @）
+- [ ] Tag `@BNBCHAIN`
 - [ ] 附合约地址（部署后）
 - [ ] 置顶短句评论
 - [ ] 中英双语两条分别发（英文搞大圈，中文搞国内）

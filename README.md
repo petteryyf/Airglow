@@ -114,7 +114,6 @@ airglow/
 ├── foundry.toml              # Foundry 配置
 ├── Makefile                  # 一键命令（render / test / deploy）
 ├── .env.example              # 环境变量模板
-├── POST.md                   # 中英双语文案
 └── airglow.png / .svg        # 第一帧渲染图
 ```
 
@@ -183,12 +182,6 @@ make deploy
 ```
 
 部署脚本会打印合约地址和三个帧缓冲 bitmap。
-
----
-
-## 发推文案
-
-见 [`POST.md`](POST.md)。
 
 ---
 

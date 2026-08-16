@@ -61,6 +61,10 @@ contract Airglow {
      * 每个像素的 bit 位置 = y * 8 + x。
      */
     function render() public returns (uint256 frameOut) {
+        // 幂等守卫：第一帧只能渲染一次。
+        // 这让「第一帧」的唯一性与 renderedAt 时间戳不可篡改，是 Airglow 的灵魂。
+        require(!rendered, "Airglow: already rendered");
+
         uint256 c = 0;
         uint256 g = 0;
         for (uint8 y = 0; y < HEIGHT; y++) {

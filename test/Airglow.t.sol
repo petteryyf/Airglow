@@ -40,4 +40,26 @@ contract AirglowTest is Test {
         vm.expectRevert("out of range");
         airglow.pixel(8, 0);
     }
+
+    // 第一帧只能渲染一次：重复 render() 必须回退（幂等守卫）
+    function test_render_can_only_run_once() public {
+        airglow.render();
+        vm.expectRevert("Airglow: already rendered");
+        airglow.render();
+    }
+
+    // 渲染后状态锁定：core/glow/frame 不被二次覆盖（在单次渲染场景下始终成立）
+    function test_state_immutable_after_render() public {
+        airglow.render();
+        uint256 c = airglow.core();
+        uint256 g = airglow.glow();
+        uint256 f = airglow.frame();
+        assertTrue(airglow.rendered());
+        // 再次调用被守卫拦下，状态保持不变
+        vm.expectRevert("Airglow: already rendered");
+        airglow.render();
+        assertEq(airglow.core(), c);
+        assertEq(airglow.glow(), g);
+        assertEq(airglow.frame(), f);
+    }
 }

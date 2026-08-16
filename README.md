@@ -6,7 +6,7 @@
 **Airglow 是一块纯链上的光栅化引擎（an on-chain rasterizer）。**
 它用区块链的出块节拍做时钟，逐像素执行光栅化算法，把几何图元变成帧缓冲里的像素。
 
-![Airglow · 火星的气辉](airglow.png)
+![Airglow · 火星的气辉](cover.png)
 
 ---
 
